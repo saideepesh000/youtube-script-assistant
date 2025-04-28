@@ -1,7 +1,7 @@
 import openai
 import streamlit as st
 
-openai.api_key = "YOUR-OPENAI-API-KEY"
+openai.api_key = st.secrets["openai"]["api_key"]
 
 def generate_outline(topic):
     prompt = f"Create a YouTube video script outline for the topic: '{topic}'. Structure it into Introduction, Main Points, and Conclusion."
